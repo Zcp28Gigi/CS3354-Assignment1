@@ -1,4 +1,4 @@
-public Class GroceryManagementSystem {
+public class GroceryManagementSystem {
     public static void main(String[] args) {
         String[] itemNames = new String[10];
         double[] itemPrices = new double[10];
@@ -8,7 +8,7 @@ public Class GroceryManagementSystem {
     /**
      * Prints the inventory of the grocery store. Excludes slots that are empty (null names).
      * 
-     * @param names  Array of item names.
+     * @param names Array of item names.
      * @param prices Array of item prices.
      * @param stocks Array of item stock quantities.
      */
