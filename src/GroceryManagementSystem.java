@@ -5,6 +5,37 @@ public class GroceryManagementSystem {
     String[] itemNames = new String[10];
     double[] itemPrices = new double[10];
     int[] itemStocks = new int[10];
+
+    Scanner keyboard = new Scanner(System.in);
+    int option;
+    do {
+      System.out.print("=== GROCERY MANAGEMENT SYSTEM ===\n1. View\n2. Restock\n3. Exit\n");
+      System.out.print("Enter the desired option[1-3]: ");
+      option = keyboard.nextInt();
+      keyboard.nextLine();
+      if (option < 1 || option > 3)
+        System.out.println("Error. Invalid input. Provide a valid option between 1 and 3 inclusive.");
+      else
+        switch (option) {
+          case 1:
+            printInventory(itemNames, itemPrices, itemStocks);
+            break;
+          case 2:
+            System.out.print("Item name:");
+            String itemName = keyboard.nextLine();
+
+            System.out.print("Amount to add to stock:");
+            int addAmount = keyboard.nextInt();
+            keyboard.nextLine();
+
+            restockItem(itemNames, itemStocks, itemName, addAmount);
+            break;
+          case 3:
+            System.out.println("Exiting...");
+            break;
+        }
+    } while (option != 3);
+    keyboard.close();
   }
 
   /**
