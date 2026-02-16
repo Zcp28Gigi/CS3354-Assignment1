@@ -6,6 +6,14 @@ public class GroceryManagementSystem {
     double[] itemPrices = new double[10];
     int[] itemStocks = new int[10];
 
+    itemNames[0] = "Milk";
+    itemPrices[0] = 3.99;
+    itemStocks[0] = 10;
+
+    itemNames[1] = "Bread";
+    itemPrices[1] = 2.49;
+    itemStocks[1] = 5;
+
     Scanner keyboard = new Scanner(System.in);
     int option;
     do {
